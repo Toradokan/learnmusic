@@ -184,8 +184,9 @@ const mapNote = function (value) {
     }
 }
 
-const manageSuccess = function () {
+const manageSuccess = function (value) {
     clearTimer();
+    document.querySelector('#right').innerHTML = mapNote(value);
     currentChallenge.challenge.count++;
     if (currentChallenge.idxBox < data[currentExercise].boxes.length - 1) {
         // moverlo de caja
@@ -209,7 +210,7 @@ const saveData = function () {
 const clickNote = function (value) {
     if (!timer) return false;
     if (currentChallenge.challenge.ans[0] == value) {
-        manageSuccess();
+        manageSuccess(value);
     } else {
         manageError(value);
     }
