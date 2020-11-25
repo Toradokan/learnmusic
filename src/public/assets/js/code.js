@@ -125,7 +125,6 @@ const clearTimer = function () {
 };
 
 const startTimer = function (time) {
-    console.log('START TIMER');
     clearTimer();
     document.querySelector(".timer").innerHTML = time;
     timer = setInterval(function () {
