@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="black"/>
+  <title>Aprende Notas Musicales</title>
+  <meta name="description" content="Aprender las notas musicales"/>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-icon-180x180.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="preload" href="./assets/fonts/major.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <div class="home">
+    <p>selecciona qué quieres practicar:</p>
+    <div class="menu">
+      <div>
+        <div id="practice-treble" style="padding: 45px 10px;" onclick="begin(0);"></div>
+        <div id="practice-bass" style="padding: 50px 10px;" onclick="begin(1);"></div>
+      </div>
+      <div>
+        <div id="practice-grand" style="padding: 7px 10px;" onclick="begin(2);"></div>
+      </div>
+    </div>
+    <div class="float"><div onclick="reset();"><img src="./assets/icon/bin.svg" width="0.8em" height="0.8em" alt="reset" /></div></div>
+  </div>
+  <div class="challenge">
+  <div class="top">
+    <div class="uno">0</div>
+    <div class="dos">0</div>
+    <div class="tres">0</div>
+    <div class="cuatro">0</div>
+    <div class="cinco">0</div>
+  </div>
+  <div class="timer"></div>
+  <div class="container">
+    <div class="main">
+      <div id="question" class="question"></div>
+      <div class="question-right">
+        <div id="wrong"></div>
+        <div id="right"></div>
+      </div>
+    </div>
+    <div class="notes">
+      <div>
+        <div onclick="clickNote('C');">do</div>
+      </div>
+      <div>
+        <div onclick="clickNote('D');">re</div>
+      </div>
+      <div>
+        <div onclick="clickNote('E');">mi</div>
+      </div>
+      <div>
+        <div onclick="clickNote('F');">fa</div>
+      </div>
+      <div>
+        <div onclick="clickNote('G');">sol</div>
+      </div>
+      <div>
+        <div onclick="clickNote('A');">la</div>
+      </div>
+      <div>
+        <div onclick="home();"><img src="./assets/icon/home.svg" width="0.8em" height="0.8em" alt="home" /></div>
+      </div>
+      <div>
+        <div onclick="clickNote('B');">si</div>
+      </div>
+      <div>
+        <div id="stop" onclick="stop();"><img src="./assets/icon/stop.svg" width="0.8em" height="0.8em" alt="stop" /></div>
+        <div id="start" onclick="start();"><img src="./assets/icon/start.svg" width="0.8em" height="0.8em" alt="start" /></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="footer">v.20201125</div>
+</body>
+<script src="./assets/js/abcjs-basic-min.js" defer></script>
+<script src="./assets/js/code.js" defer></script>
+</html>
